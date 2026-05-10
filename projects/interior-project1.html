@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>US Project | Sarra Saifee</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<button class="back-button" onclick="goBack()">&#10094; Back</button>
+
+<section class="project-page">
+
+    <h1 class="fade-up">US Project</h1>
+
+    <!-- VIDEO -->
+
+    <video autoplay muted loop playsinline class="spo-video">
+
+        <source src="../assets/videos/interior-bg.mp4" type="video/mp4">
+
+    </video>
+
+    <!-- CATEGORY TABS -->
+    <div class="tabs fade-up">
+        <button class="tab active" onclick="filterCategory('all', event)">All</button>
+        <button class="tab" onclick="filterCategory('bedroom', event)">Bedroom</button>
+        <button class="tab" onclick="filterCategory('kitchen', event)">Kitchen</button>
+        <button class="tab" onclick="filterCategory('living', event)">Living</button>
+        <button class="tab" onclick="filterCategory('pooja', event)">Pooja Room</button>
+        <button class="tab" onclick="filterCategory('office', event)">Library / Office</button>
+        <button class="tab" onclick="filterCategory('lobby', event)">Lobby / Lift</button>
+    </div>
+
+    <!-- CATEGORY GRID -->
+
+    <div class="category-grid">
+
+        <!-- BEDROOMS -->
+        <div class="category-box bedroom">
+            <a href="bedroom1.html">
+                <div class="category-img" style="background-image:url('../assets/images/interior/project1/bed1.jpg')"></div>
+                <p>Bedroom 1</p>
+            </a>
+        </div>
+
+        <div class="category-box bedroom">
+            <a href="bedroom2.html">
+                <div class="category-img" style="background-image:url('../assets/images/interior/project1/bed2.jpg')"></div>
+                <p>Bedroom 2</p>
+            </a>
+        </div>
+
+        <div class="category-box bedroom">
+            <a href="master-bedroom.html">
+                <div class="category-img" style="background-image:url('../assets/images/interior/project1/master.jpg')"></div>
+                <p>Master Bedroom</p>
+            </a>
+        </div>
+
+        <!-- KITCHEN -->
+        <div class="category-box kitchen">
+            <a href="kitchen.html">
+                <div class="category-img" style="background-image:url('../assets/images/interior/project1/kitchen1.jpg')"></div>
+                <p>Kitchen</p>
+            </a>
+        </div>
+
+        <!-- LIVING -->
+        <div class="category-box living">
+            <a href="living.html">
+                <div class="category-img" style="background-image:url('../assets/images/interior/project1/living1.jpg')"></div>
+                <p>Living Area</p>
+            </a>
+        </div>
+
+        <!-- POOJA ROOM -->
+        <div class="category-box pooja">
+            <a href="pooja.html">
+                <div class="category-img" style="background-image:url('../assets/images/interior/project1/pooja1.jpg')"></div>
+                <p>Pooja Room</p>
+            </a>
+        </div>
+
+        <!-- LIBRARY / OFFICE -->
+        <div class="category-box office">
+            <a href="office.html">
+                <div class="category-img" style="background-image:url('../assets/images/interior/project1/office1.jpg')"></div>
+                <p>Library / Office</p>
+            </a>
+        </div>
+
+        <!-- LOBBY / LIFT -->
+        <div class="category-box lobby">
+            <a href="lobby.html">
+                <div class="category-img" style="background-image:url('../assets/images/interior/project1/lobby1.jpg')"></div>
+                <p>Lobby / Lift</p>
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
+<script>
+function goBack() {
+    window.history.back();
+}
+
+function filterCategory(category, event) {
+
+    const boxes = document.querySelectorAll(".category-box");
+    const tabs = document.querySelectorAll(".tab");
+
+    tabs.forEach(tab => tab.classList.remove("active"));
+    event.target.classList.add("active");
+
+    boxes.forEach(box => {
+        if (category === "all" || box.classList.contains(category)) {
+            box.style.display = "block";
+        } else {
+            box.style.display = "none";
+        }
+    });
+}
+
+/* ENTRY ANIMATION */
+window.addEventListener("load", () => {
+    document.querySelectorAll(".fade-up").forEach((el, i) => {
+        setTimeout(() => el.classList.add("show"), i * 150);
+    });
+});
+</script>
+
+</body>
+</html>

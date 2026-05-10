@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lobby / Lift | US Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<button class="back-button" onclick="goBack()">&#10094; Back</button>
+
+<section class="room-page">
+
+    <h1 class="fade-up">Lobby / Lift</h1>
+
+    <div class="lobby-grid">
+
+        <!-- HERO -->
+        <div class="lobby-img large">
+            <img src="../assets/images/interior/project1/lobby/img1.jpg" onclick="openViewer(this.src)">
+        </div>
+
+        <!-- REST -->
+        <div class="lobby-img">
+            <img src="../assets/images/interior/project1/lobby/img2.jpg" onclick="openViewer(this.src)">
+        </div>
+
+        <div class="lobby-img">
+            <img src="../assets/images/interior/project1/lobby/img3.jpg" onclick="openViewer(this.src)">
+        </div>
+
+        <div class="lobby-img">
+            <img src="../assets/images/interior/project1/lobby/img4.jpg" onclick="openViewer(this.src)">
+        </div>
+
+        <div class="lobby-img">
+            <img src="../assets/images/interior/project1/lobby/img5.jpg" onclick="openViewer(this.src)">
+        </div>
+
+        <div class="lobby-img">
+            <img src="../assets/images/interior/project1/lobby/img6.jpg" onclick="openViewer(this.src)">
+        </div>
+
+        <div class="lobby-img">
+            <img src="../assets/images/interior/project1/lobby/img7.jpg" onclick="openViewer(this.src)">
+        </div>
+
+        <div class="lobby-img">
+            <img src="../assets/images/interior/project1/lobby/img8.jpg" onclick="openViewer(this.src)">
+        </div>
+
+        <div class="lobby-img">
+            <img src="../assets/images/interior/project1/lobby/img9.jpg" onclick="openViewer(this.src)">
+        </div>
+
+        <div class="lobby-img">
+            <img src="../assets/images/interior/project1/lobby/img10.jpg" onclick="openViewer(this.src)">
+        </div>
+
+    </div>
+
+    <!-- NAVIGATION -->
+    <div class="room-navigation">
+        <a href="office.html" class="nav-btn prev">← Library / Office</a>
+        <span></span>
+    </div>
+
+</section>
+
+<!-- FULLSCREEN VIEW -->
+<div id="viewer">
+    <span class="close-btn" onclick="closeViewer()">✕</span>
+    <img id="viewerImg">
+</div>
+
+<script>
+function goBack() {
+    window.history.back();
+}
+
+function openViewer(src) {
+    document.getElementById("viewer").style.display = "flex";
+    document.getElementById("viewerImg").src = src;
+}
+
+function closeViewer() {
+    document.getElementById("viewer").style.display = "none";
+}
+
+window.addEventListener("load", () => {
+    document.querySelector(".fade-up").classList.add("show");
+});
+</script>
+
+</body>
+</html>

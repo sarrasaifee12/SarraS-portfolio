@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MMC Dewas Office | 2026</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="brand">
+        <div class="logo-circle">
+            <img src="../assets/images/logo.png">
+        </div>
+
+        <div class="brand-text">
+            <div class="brand-name">SARRA SAIFEE</div>
+            <div class="brand-subtitle">5th Year Architecture Student</div>
+        </div>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="../index.html">HOME</a></li>
+            <li><a href="../about.html">ABOUT</a></li>
+            <li><a href="../architecture.html">ARCHITECTURE</a></li>
+            <li><a href="../interior.html" class="active">INTERIOR</a></li>
+            <li><a href="../contact.html">CONTACT</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- VIDEO -->
+
+    <video autoplay muted loop playsinline class="spo-video">
+
+        <source src="../assets/videos/interior-bg.mp4" type="video/mp4">
+
+    </video>
+
+<!-- CONTENT -->
+<section class="office-section">
+
+    <h1 class="office-title">MMC Dewas Office</h1>
+    <p class="office-subtitle">Office Interior • Dewas • 2026</p>
+
+    <div class="mmc-gallery">
+
+        <!-- HERO IMAGE -->
+        <div class="mmc-hero">
+            <img src="../assets/images/interior/mmc/img1.png" onclick="openViewer(this.src)">
+        </div>
+
+        <!-- REST IMAGES -->
+        <img src="../assets/images/interior/mmc/img2.png" onclick="openViewer(this.src)">
+        <img src="../assets/images/interior/mmc/img3.png" onclick="openViewer(this.src)">
+        <img src="../assets/images/interior/mmc/img4.png" onclick="openViewer(this.src)">
+        <img src="../assets/images/interior/mmc/img5.png" onclick="openViewer(this.src)">
+        <img src="../assets/images/interior/mmc/img6.png" onclick="openViewer(this.src)">
+        <img src="../assets/images/interior/mmc/img7.png" onclick="openViewer(this.src)">
+        <img src="../assets/images/interior/mmc/img8.png" onclick="openViewer(this.src)">
+        <img src="../assets/images/interior/mmc/img9.png" onclick="openViewer(this.src)">
+        <img src="../assets/images/interior/mmc/img10.png" onclick="openViewer(this.src)">
+        <img src="../assets/images/interior/mmc/img11.png" onclick="openViewer(this.src)">
+        <img src="../assets/images/interior/mmc/img12.png" onclick="openViewer(this.src)">
+        <img src="../assets/images/interior/mmc/img13.png" onclick="openViewer(this.src)">
+        <img src="../assets/images/interior/mmc/img14.png" onclick="openViewer(this.src)">
+        <img src="../assets/images/interior/mmc/img15.png" onclick="openViewer(this.src)">
+        <img src="../assets/images/interior/mmc/img16.png" onclick="openViewer(this.src)">
+        <img src="../assets/images/interior/mmc/img17.png" onclick="openViewer(this.src)">
+        <img src="../assets/images/interior/mmc/img18.png" onclick="openViewer(this.src)">
+        <img src="../assets/images/interior/mmc/img19.png" onclick="openViewer(this.src)">
+        <img src="../assets/images/interior/mmc/img20.png" onclick="openViewer(this.src)">
+        <img src="../assets/images/interior/mmc/img21.png" onclick="openViewer(this.src)">
+        <img src="../assets/images/interior/mmc/img22.png" onclick="openViewer(this.src)">
+
+    </div>
+
+</section>
+
+<!-- VIEWER -->
+<div id="viewer">
+    <span onclick="closeViewer()" class="close-btn">✕</span>
+    <img id="viewerImg">
+</div>
+
+<script>
+function openViewer(src) {
+    document.getElementById("viewer").style.display = "flex";
+    document.getElementById("viewerImg").src = src;
+}
+
+function closeViewer() {
+    document.getElementById("viewer").style.display = "none";
+}
+</script>
+
+</body>
+
+<a href="../interior.html" class="spo-back">
+
+    <span>←</span> BACK
+
+</a>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hall 02 | Banquet</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+
+    <div class="brand">
+        <div class="logo-circle">
+            <img src="../assets/images/logo.png">
+        </div>
+
+        <div class="brand-text">
+            <div class="brand-name">SARRA SAIFEE</div>
+            <div class="brand-subtitle">5th Year Architecture Student</div>
+        </div>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="../index.html">HOME</a></li>
+            <li><a href="../about.html">ABOUT</a></li>
+            <li><a href="../architecture.html">ARCHITECTURE</a></li>
+            <li><a href="../interior.html" class="active">INTERIOR</a></li>
+            <li><a href="../contact.html">CONTACT</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<!-- CONTENT -->
+<section class="hall-section">
+
+    <button onclick="history.back()" class="back-btn">← Back</button>
+
+    <h1 class="hall-title">Hall 02</h1>
+
+    <div class="hall-gallery">
+
+        <img src="../assets/images/interior/banquet/hall2/img1.png" onclick="openViewer(this.src)">
+        <img src="../assets/images/interior/banquet/hall2/img2.png" onclick="openViewer(this.src)">
+        <img src="../assets/images/interior/banquet/hall2/img3.png" onclick="openViewer(this.src)">
+        <img src="../assets/images/interior/banquet/hall2/img4.png" onclick="openViewer(this.src)">
+        <img src="../assets/images/interior/banquet/hall2/img5.png" onclick="openViewer(this.src)">
+        <img src="../assets/images/interior/banquet/hall2/img6.png" onclick="openViewer(this.src)">
+        <img src="../assets/images/interior/banquet/hall2/img7.png" onclick="openViewer(this.src)">
+        <img src="../assets/images/interior/banquet/hall2/img8.png" onclick="openViewer(this.src)">
+        <img src="../assets/images/interior/banquet/hall2/img9.png" onclick="openViewer(this.src)">
+        <img src="../assets/images/interior/banquet/hall2/img10.png" onclick="openViewer(this.src)">
+
+    </div>
+
+</section>
+
+<!-- FULLSCREEN VIEW -->
+<div id="viewer">
+    <span onclick="closeViewer()" class="close-btn">✕</span>
+    <img id="viewerImg">
+</div>
+
+<script>
+function openViewer(src) {
+    document.getElementById("viewer").style.display = "flex";
+    document.getElementById("viewerImg").src = src;
+}
+
+function closeViewer() {
+    document.getElementById("viewer").style.display = "none";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Temporary Accommodations | Sarra Saifee</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<!-- FULLSCREEN SLIDESHOW -->
+<div class="slideshow-container">
+
+    <!-- COVER -->
+    <div class="slide active">
+        <img src="../assets/images/temporary-accommodations/cover.jpg">
+    </div>
+
+    <!-- PROJECT IMAGES -->
+    <div class="slide"><img src="../assets/images/temporary-accommodations/temp-1.jpg"></div>
+    <div class="slide"><img src="../assets/images/temporary-accommodations/temp-2.jpg"></div>
+    <div class="slide"><img src="../assets/images/temporary-accommodations/temp-3.jpg"></div>
+    <div class="slide"><img src="../assets/images/temporary-accommodations/temp-4.jpg"></div>
+    <div class="slide"><img src="../assets/images/temporary-accommodations/temp-5.jpg"></div>
+    <div class="slide"><img src="../assets/images/temporary-accommodations/temp-6.jpg"></div>
+    <div class="slide"><img src="../assets/images/temporary-accommodations/temp-7.jpg"></div>
+    <div class="slide"><img src="../assets/images/temporary-accommodations/temp-8.jpg"></div>
+    <div class="slide"><img src="../assets/images/temporary-accommodations/temp-9.jpg"></div>
+    <div class="slide"><img src="../assets/images/temporary-accommodations/temp-10.jpg"></div>
+    <div class="slide"><img src="../assets/images/temporary-accommodations/temp-11.jpg"></div>
+    <div class="slide"><img src="../assets/images/temporary-accommodations/temp-12.jpg"></div>
+
+    <!-- ARROWS -->
+    <div class="prev" onclick="changeSlide(-1)">&#10094;</div>
+    <div class="next" onclick="changeSlide(1)">&#10095;</div>
+
+</div>
+
+<!-- PROJECT DETAILS -->
+<section class="project-content">
+
+    <h1>Temporary Accommodations</h1>
+    <p class="project-meta">2024 · Academic Studio</p>
+
+    <div class="project-text">
+        <p>
+            A modular accommodation system designed to respond to temporary housing needs.
+            The project explores flexibility, prefabrication strategies, and adaptive spatial
+            configurations for short-term occupancy.
+        </p>
+    </div>
+
+    <div class="project-info-grid">
+        <div>
+            <h4>Studio</h4>
+            <p>Architectural Design Studio IV</p>
+        </div>
+        <div>
+            <h4>Typology</h4>
+            <p>Temporary Housing</p>
+        </div>
+        <div>
+            <h4>Software</h4>
+            <p>AutoCAD · Revit · D5 Render</p>
+        </div>
+    </div>
+
+</section>
+
+<script>
+let currentSlide = 0;
+const slides = document.querySelectorAll(".slide");
+
+function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove("active"));
+    slides[index].classList.add("active");
+}
+
+function changeSlide(direction) {
+    currentSlide += direction;
+
+    if (currentSlide < 0) currentSlide = slides.length - 1;
+    if (currentSlide >= slides.length) currentSlide = 0;
+
+    showSlide(currentSlide);
+}
+</script>
+
+<script>
+function goBack() {
+    if (document.referrer !== "") {
+        window.history.back();
+    } else {
+        window.location.href = "../academic.html";
+    }
+}
+</script>
+
+</body>
+<button class="back-button" onclick="goBack()">
+    &#10094; Back
+</button>
+</html>

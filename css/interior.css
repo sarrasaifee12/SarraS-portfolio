@@ -1,0 +1,184 @@
+/* ============================= */
+/* RESET */
+/* ============================= */
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    color: white;
+}
+
+/* ============================= */
+/* VIDEO BACKGROUND */
+/* ============================= */
+
+.int-bg-video {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+.int-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.55);
+    z-index: -1;
+}
+
+/* ============================= */
+/* MAIN SECTION */
+/* ============================= */
+
+.int-main {
+    min-height: 100vh;
+    padding-bottom: 80px;
+}
+
+/* TITLE */
+
+.int-title {
+    text-align: center;
+    margin-top: 140px;
+    margin-bottom: 60px;
+
+    font-family: 'Cinzel', serif;
+    font-size: 58px;
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+
+
+/* PROJECTS */
+
+.int-projects {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+/* ============================= */
+/* CARD */
+/* ============================= */
+
+.int-card {
+    width: 280px;
+    padding: 18px;
+    border-radius: 18px;
+
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(255,255,255,0.2);
+
+    text-decoration: none;
+    color: white;
+
+    transition: 0.3s ease;
+}
+
+/* IMAGE */
+
+.int-thumb {
+    width: 100%;
+    height: 160px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.int-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* TEXT */
+
+.int-card h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 19px;
+    letter-spacing: 1px;
+    margin-top: 14px;
+}
+
+.int-card p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15px;
+    font-style: italic;
+    color: #cccccc;
+}
+
+.int-card {
+    padding: 22px;
+}
+
+/* HOVER */
+
+.int-card {
+    transition: all 0.4s ease;
+}
+
+.int-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255,255,255,0.12);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+}
+
+/* ============================= */
+/* NAVBAR FIX (GLASS EFFECT) */
+/* ============================= */
+
+header {
+    width: 100%;
+    padding: 20px 80px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(15, 15, 15, 0.55); /* lighter */
+    backdrop-filter: blur(12px);       /* stronger blur */
+
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -40px;
+    width: 100%;
+    height: 40px;
+
+    background: linear-gradient(
+        rgba(15,15,15,0.6),
+        rgba(15,15,15,0)
+    );
+
+    pointer-events: none;
+}
+
+nav a {
+    color: rgba(255,255,255,0.75);
+}
+
+nav a:hover,
+nav a.active {
+    color: #ffffff;
+}
+
+.logo-circle {
+    border: 2px solid rgba(255,255,255,0.1);
+}
+

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Professional Practice | Sarra Saifee</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FONTS -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- BACKGROUND VIDEO -->
+
+    <video autoplay muted loop playsinline class="professional-video">
+
+        <source src="assets/videos/professional-bg.mp4" type="video/mp4">
+
+    </video>
+
+    <!-- OVERLAY -->
+
+    <div class="professional-overlay"></div>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="brand">
+
+            <div class="logo-circle">
+
+                <img src="assets/images/logo.png" alt="">
+
+            </div>
+
+            <div class="brand-text">
+
+                <div class="brand-name">
+                    SARRA SAIFEE
+                </div>
+
+                <div class="brand-subtitle">
+                    5th Year Architecture Student
+                </div>
+
+            </div>
+
+        </div>
+
+        <nav>
+
+            <ul>
+
+                <li><a href="index.html">HOME</a></li>
+
+                <li><a href="about.html">ABOUT</a></li>
+
+                <li><a href="architecture.html" class="active">ARCHITECTURE</a></li>
+
+                <li><a href="interior.html">INTERIOR</a></li>
+
+                <li><a href="contact.html">CONTACT</a></li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <!-- SECTION -->
+
+    <section class="pro-section">
+
+        <h1>Professional Practice</h1>
+
+        <!-- PROJECT 1 -->
+
+        <div class="pro-row">
+
+            <div class="pro-img zoom-container">
+
+                <div class="zoom-img"
+                style="background-image:url('assets/images/professional/zalani/cover.jpg')">
+                </div>
+
+            </div>
+
+            <div class="pro-text">
+
+                <h3>Zalani Residency</h3>
+
+                <p>Residential Planning · Casa City, Indore</p>
+
+            </div>
+
+        </div>
+
+        <!-- PROJECT 2 -->
+
+        <div class="pro-row">
+
+            <div class="pro-img zoom-container">
+
+                <div class="zoom-img"
+                style="background-image:url('assets/images/professional/nagrani/cover.jpg')">
+                </div>
+
+            </div>
+
+            <div class="pro-text">
+
+                <h3>Nagrani Residence</h3>
+
+                <p>Private Villa Planning · Vijay Nagar, Indore</p>
+
+            </div>
+
+        </div>
+
+        <!-- PROJECT 3 -->
+
+        <a href="projects/shriram-hotel.html"
+        class="pro-row pro-link">
+
+            <div class="pro-img">
+
+                <img src="assets/images/professional/working/cover.jpg"
+                alt="Shri Ram Hotel">
+
+            </div>
+
+            <div class="pro-text">
+
+                <h3>Shri Ram Hotel</h3>
+
+                <p>Hospitality Project · Maihar, MP</p>
+
+            </div>
+
+        </a>
+
+    </section>
+
+    <!-- BACK BUTTON -->
+
+    <a href="architecture.html" class="spo-back">
+
+        <span>←</span> BACK
+
+    </a>
+
+    <!-- SCRIPT -->
+
+    <script>
+
+    document.querySelectorAll(".zoom-container").forEach(container => {
+
+        const img = container.querySelector(".zoom-img");
+
+        container.addEventListener("mouseenter", () => {
+
+            img.style.backgroundSize = "300%";
+        });
+
+        container.addEventListener("mousemove", (e) => {
+
+            const rect = container.getBoundingClientRect();
+
+            const x =
+            ((e.clientX - rect.left) / rect.width) * 100;
+
+            const y =
+            ((e.clientY - rect.top) / rect.height) * 100;
+
+            img.style.backgroundPosition =
+            x + "% " + y + "%";
+        });
+
+        container.addEventListener("mouseleave", () => {
+
+            img.style.backgroundSize = "100%";
+
+            img.style.backgroundPosition = "center";
+        });
+
+    });
+
+    </script>
+
+</body>
+
+</html>

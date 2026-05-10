@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mixed Use Housing Apartment | Sarra Saifee</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<!-- FULLSCREEN SLIDESHOW -->
+<div class="slideshow-container">
+
+    <!-- Slides -->
+    <div class="slide active"><img src="../assets/images/mixed-use-housing/housing-1.jpg"></div>
+    <div class="slide"><img src="../assets/images/mixed-use-housing/housing-2.jpg"></div>
+    <div class="slide"><img src="../assets/images/mixed-use-housing/housing-3.jpg"></div>
+    <div class="slide"><img src="../assets/images/mixed-use-housing/housing-4.jpg"></div>
+    <div class="slide"><img src="../assets/images/mixed-use-housing/housing-5.jpg"></div>
+    <div class="slide"><img src="../assets/images/mixed-use-housing/housing-6.jpg"></div>
+    <div class="slide"><img src="../assets/images/mixed-use-housing/housing-7.jpg"></div>
+    <div class="slide"><img src="../assets/images/mixed-use-housing/housing-8.jpg"></div>
+    <div class="slide"><img src="../assets/images/mixed-use-housing/housing-9.jpg"></div>
+    <div class="slide"><img src="../assets/images/mixed-use-housing/housing-10.jpg"></div>
+    <div class="slide"><img src="../assets/images/mixed-use-housing/housing-11.jpg"></div>
+    <div class="slide"><img src="../assets/images/mixed-use-housing/housing-12.jpg"></div>
+    <div class="slide"><img src="../assets/images/mixed-use-housing/housing-13.jpg"></div>
+    <div class="slide"><img src="../assets/images/mixed-use-housing/housing-14.jpg"></div>
+    <div class="slide"><img src="../assets/images/mixed-use-housing/housing-15.jpg"></div>
+    <div class="slide"><img src="../assets/images/mixed-use-housing/housing-16.jpg"></div>
+    <div class="slide"><img src="../assets/images/mixed-use-housing/housing-17.jpg"></div>
+    <div class="slide"><img src="../assets/images/mixed-use-housing/housing-18.jpg"></div>
+    <div class="slide"><img src="../assets/images/mixed-use-housing/housing-19.jpg"></div>
+
+    <!-- Arrows -->
+    <div class="prev" onclick="changeSlide(-1)">&#10094;</div>
+    <div class="next" onclick="changeSlide(1)">&#10095;</div>
+
+</div>
+
+<!-- PROJECT DETAILS -->
+<section class="project-content">
+
+    <h1>Mixed Use Housing Apartment</h1>
+    <p class="project-meta">2025 · Academic Studio</p>
+
+    <div class="project-text">
+        <p>
+            A mixed-use residential development integrating commercial spaces at ground level
+            with multi-level housing above. The project investigates density, circulation,
+            and social interaction within vertical urban living.
+        </p>
+    </div>
+
+    <div class="project-info-grid">
+        <div>
+            <h4>Studio</h4>
+            <p>Architectural Design Studio V</p>
+        </div>
+        <div>
+            <h4>Typology</h4>
+            <p>Mixed Use Residential</p>
+        </div>
+        <div>
+            <h4>Software</h4>
+            <p>AutoCAD · Revit · Lumion</p>
+        </div>
+    </div>
+
+</section>
+
+<script>
+let currentSlide = 0;
+const slides = document.querySelectorAll(".slide");
+
+function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove("active"));
+    slides[index].classList.add("active");
+}
+
+function changeSlide(direction) {
+    currentSlide += direction;
+
+    if (currentSlide < 0) currentSlide = slides.length - 1;
+    if (currentSlide >= slides.length) currentSlide = 0;
+
+    showSlide(currentSlide);
+}
+</script>
+
+<script>
+function goBack() {
+    if (document.referrer !== "") {
+        window.history.back();
+    } else {
+        window.location.href = "../academic.html";
+    }
+}
+</script>
+
+</body>
+<button class="back-button" onclick="goBack()">
+    &#10094; Back
+</button>
+</html>

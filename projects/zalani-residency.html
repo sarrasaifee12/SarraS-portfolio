@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zalani Residency | Sarra Saifee</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<button class="back-button" onclick="goBack()">&#10094; Back</button>
+
+<div class="slideshow-container">
+
+    <div class="slide active">
+        <img src="../assets/images/professional/zalani/plan-1.jpg">
+    </div>
+
+    <div class="slide">
+        <img src="../assets/images/professional/zalani/plan-2.jpg">
+    </div>
+
+    <div class="prev" onclick="changeSlide(-1)">&#10094;</div>
+    <div class="next" onclick="changeSlide(1)">&#10095;</div>
+
+</div>
+
+<section class="project-content">
+
+    <h1>Zalani Residenc</h1>
+    <p class="project-meta">
+    Residential Planning · 2025 · S-SPACE Architects<br>
+    Location: Casa City, Indore
+</p>
+
+    <div class="project-text">
+        <p>
+            A residential planning project focused on efficient spatial organization,
+            circulation clarity, and functional zoning. The design responds to
+            client requirements while maintaining a balanced layout strategy.
+        </p>
+    </div>
+
+</section>
+
+<script>
+let currentSlide = 0;
+let slides = document.getElementsByClassName("slide");
+
+function changeSlide(direction) {
+    slides[currentSlide].classList.remove("active");
+    currentSlide += direction;
+
+    if (currentSlide < 0) currentSlide = slides.length - 1;
+    if (currentSlide >= slides.length) currentSlide = 0;
+
+    slides[currentSlide].classList.add("active");
+}
+
+function goBack() {
+    window.history.back();
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Motel | Sarra Saifee</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<button class="back-button" onclick="goBack()">&#10094; Back</button>
+
+<div class="slideshow-container">
+
+    <div class="slide active"><img src="../assets/images/motel/motel-1.jpg" alt=""></div>
+    <div class="slide"><img src="../assets/images/motel/motel-2.jpg" alt=""></div>
+    <div class="slide"><img src="../assets/images/motel/motel-3.png" alt=""></div>
+    <div class="slide"><img src="../assets/images/motel/motel-4.jpg" alt=""></div>
+    <div class="slide"><img src="../assets/images/motel/motel-5.jpg" alt=""></div>
+    <div class="slide"><img src="../assets/images/motel/motel-6.jpg" alt=""></div>
+    <div class="slide"><img src="../assets/images/motel/motel-7.jpg" alt=""></div>
+    <div class="slide"><img src="../assets/images/motel/motel-8.jpg" alt=""></div>
+    <div class="slide"><img src="../assets/images/motel/motel-9.jpg" alt=""></div>
+    <div class="slide"><img src="../assets/images/motel/motel-10.jpg" alt=""></div>
+    <div class="slide"><img src="../assets/images/motel/motel-11.jpg" alt=""></div>
+    <div class="slide"><img src="../assets/images/motel/motel-12.jpg" alt=""></div>
+    <div class="slide"><img src="../assets/images/motel/motel-13.jpg" alt=""></div>
+    <div class="slide"><img src="../assets/images/motel/motel-14.jpg" alt=""></div>
+    <div class="slide"><img src="../assets/images/motel/motel-15.jpg" alt=""></div>
+    <div class="slide"><img src="../assets/images/motel/motel-16.jpg" alt=""></div>
+
+    <div class="prev" onclick="changeSlide(-1)">&#10094;</div>
+    <div class="next" onclick="changeSlide(1)">&#10095;</div>
+
+</div>
+
+<section class="project-content">
+
+    <h1>Motel</h1>
+    <p class="project-meta">2023 · Academic Studio</p>
+
+    <div class="project-text">
+        <p>
+            The motel project explores biomimicry as a design strategy,
+            drawing inspiration from natural forms to develop a cohesive
+            hospitality environment. The design investigates modular repetition,
+            efficient circulation, and strong landscape integration to create
+            a balanced spatial experience.
+        </p>
+    </div>
+
+    <div class="project-info-grid">
+        <div>
+            <h4>Studio</h4>
+            <p>Architectural Design Studio III</p>
+        </div>
+        <div>
+            <h4>Typology</h4>
+            <p>Hospitality</p>
+        </div>
+        <div>
+            <h4>Software</h4>
+            <p>AutoCAD · SketchUp · Lumion</p>
+        </div>
+    </div>
+
+</section>
+
+<script>
+let currentSlide = 0;
+let slides = document.getElementsByClassName("slide");
+
+function changeSlide(direction) {
+    slides[currentSlide].classList.remove("active");
+
+    currentSlide += direction;
+
+    if (currentSlide < 0) currentSlide = slides.length - 1;
+    if (currentSlide >= slides.length) currentSlide = 0;
+
+    slides[currentSlide].classList.add("active");
+}
+
+function goBack() {
+    window.history.back();
+}
+</script>
+
+</body>
+</html>

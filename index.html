@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sarra Saifee | Architectural Portfolio</title>
+
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<!-- LOGO FULLSCREEN VIEW -->
+
+<div id="logoViewer">
+
+    <span id="closeLogo">&times;</span>
+
+    <img src="assets/images/logo.png" alt="Logo Fullscreen">
+
+</div>
+
+<body>
+
+<!-- ========================================= -->
+<!-- HEADER -->
+<!-- ========================================= -->
+
+<header>
+
+    <div class="brand">
+
+        <div class="logo-circle">
+            <img src="assets/images/logo.png"
+            alt=""
+            id="siteLogo">
+        </div>
+
+        <div class="brand-text">
+            <div class="brand-name">SARRA SAIFEE</div>
+            <div class="brand-subtitle">
+                5th Year Architecture Student
+            </div>
+        </div>
+
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="architecture.html">ARCHITECTURE</a></li>
+            <li><a href="interior.html">INTERIOR</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<!-- ========================================= -->
+<!-- HERO -->
+<!-- ========================================= -->
+
+<section class="hero">
+
+    <!-- VIDEO -->
+
+    <video autoplay muted loop playsinline class="hero-video">
+        <source src="assets/videos/home1.mp4" type="video/mp4">
+    </video>
+
+    <!-- OVERLAY -->
+
+    <div class="hero-overlay"></div>
+
+    <!-- HERO CONTENT -->
+
+    <div class="hero-content">
+
+        <!-- SMALL META -->
+
+        <div class="hero-meta fade-up">
+            Architecture · Interiors · Spatial Narratives
+        </div>
+
+        <!-- MAIN TITLE -->
+
+        <h1 class="fade-up delay-1">
+
+            <span>ARCHITECTURAL</span>
+
+            <span>PORTFOLIO</span>
+
+        </h1>
+
+        <!-- SUBTEXT -->
+
+        <p class="fade-up delay-2">
+            Selected Works · 2022—Present
+        </p>
+
+        <!-- DIVIDER -->
+
+        <div class="hero-line fade-up delay-3"></div>
+
+    </div>
+
+    <!-- SIDE INDEX -->
+
+    <div class="hero-side fade-up delay-4">
+
+        <div class="side-item">
+            <span>01</span>
+            <p>Architecture</p>
+        </div>
+
+        <div class="side-item">
+            <span>02</span>
+            <p>Interior Design</p>
+        </div>
+
+        <div class="side-item">
+            <span>03</span>
+            <p>Professional Practice</p>
+        </div>
+
+    </div>
+
+</section>
+
+<script>
+
+const siteLogo =
+document.getElementById("siteLogo");
+
+const logoViewer =
+document.getElementById("logoViewer");
+
+const closeLogo =
+document.getElementById("closeLogo");
+
+/* OPEN */
+
+siteLogo.addEventListener("click", () => {
+
+    logoViewer.classList.add("active");
+});
+
+/* CLOSE */
+
+closeLogo.addEventListener("click", () => {
+
+    logoViewer.classList.remove("active");
+});
+
+/* CLICK OUTSIDE */
+
+logoViewer.addEventListener("click", (e) => {
+
+    if(e.target === logoViewer) {
+
+        logoViewer.classList.remove("active");
+    }
+});
+
+</script>
+</body>
+</html>

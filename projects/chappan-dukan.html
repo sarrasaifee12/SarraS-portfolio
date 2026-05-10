@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Chappan Dukan | Sarra Saifee</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FONTS -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+
+<!-- BACK BUTTON -->
+
+<a href="../academic.html" class="spo-back">
+
+    <span>←</span> BACK
+
+</a>
+
+<!-- ========================================= -->
+<!-- FULLSCREEN SLIDESHOW -->
+<!-- ========================================= -->
+
+<div class="slideshow-container">
+
+    <!-- COVER -->
+
+    <div class="slide active">
+
+        <img src="../assets/images/chappan-dukan/cover.jpg">
+
+    </div>
+
+    <!-- PROJECT IMAGES -->
+
+    <div class="slide"><img src="../assets/images/chappan-dukan/img1.png"></div>
+
+    <div class="slide"><img src="../assets/images/chappan-dukan/img2.png"></div>
+
+    <div class="slide"><img src="../assets/images/chappan-dukan/img3.png"></div>
+
+    <div class="slide"><img src="../assets/images/chappan-dukan/img4.png"></div>
+
+    <div class="slide"><img src="../assets/images/chappan-dukan/img5.png"></div>
+
+    <div class="slide"><img src="../assets/images/chappan-dukan/img7.png"></div>
+
+    <div class="slide"><img src="../assets/images/chappan-dukan/img8.png"></div>
+
+    <div class="slide"><img src="../assets/images/chappan-dukan/img9.png"></div>
+
+    <div class="slide"><img src="../assets/images/chappan-dukan/img10.png"></div>
+
+    <div class="slide"><img src="../assets/images/chappan-dukan/img11.png"></div>
+
+    <div class="slide"><img src="../assets/images/chappan-dukan/img12.png"></div>
+
+    <div class="slide"><img src="../assets/images/chappan-dukan/img13.png"></div>
+
+    <div class="slide"><img src="../assets/images/chappan-dukan/img14.png"></div>
+
+    <div class="slide"><img src="../assets/images/chappan-dukan/img15.png"></div>
+
+    <!-- ARROWS -->
+
+    <div class="prev" onclick="changeSlide(-1)">&#10094;</div>
+
+    <div class="next" onclick="changeSlide(1)">&#10095;</div>
+
+</div>
+
+<!-- ========================================= -->
+<!-- PROJECT DETAILS -->
+<!-- ========================================= -->
+
+<section class="project-content">
+
+    <h1>Chappan Dukan</h1>
+
+    <p class="project-meta">
+        2026 · Academic Studio
+    </p>
+
+    <div class="project-text">
+
+        <p>
+
+            Chappan Dukan reimagines one of Indore’s most iconic public food streets
+            through contemporary urban design and spatial experience. The project
+            focuses on enhancing pedestrian interaction, visual identity, public
+            gathering spaces, and atmospheric street activation while preserving
+            the cultural vibrancy of the original urban fabric.
+
+        </p>
+
+    </div>
+
+    <div class="project-info-grid">
+
+        <div>
+
+            <h4>Studio</h4>
+
+            <p>Urban Design Studio</p>
+
+        </div>
+
+        <div>
+
+            <h4>Typology</h4>
+
+            <p>Urban Streetscape Redevelopment</p>
+
+        </div>
+
+        <div>
+
+            <h4>Software</h4>
+
+            <p>AutoCAD · SketchUp · D5 Render · Photoshop</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ========================================= -->
+<!-- SCRIPT -->
+<!-- ========================================= -->
+
+<script>
+
+let currentSlide = 0;
+
+const slides = document.querySelectorAll(".slide");
+
+function showSlide(index) {
+
+    slides.forEach(slide => slide.classList.remove("active"));
+
+    slides[index].classList.add("active");
+}
+
+function changeSlide(direction) {
+
+    currentSlide += direction;
+
+    if (currentSlide < 0)
+        currentSlide = slides.length - 1;
+
+    if (currentSlide >= slides.length)
+        currentSlide = 0;
+
+    showSlide(currentSlide);
+}
+
+</script>
+
+</body>
+</html>

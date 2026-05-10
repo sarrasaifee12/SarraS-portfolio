@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shri Ram Hotel | Professional Practice</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="brand">
+        <div class="logo-circle">
+            <img src="../assets/images/logo.png" alt="">
+        </div>
+
+        <div class="brand-text">
+            <div class="brand-name">SARRA SAIFEE</div>
+            <div class="brand-subtitle">5th Year Architecture Student</div>
+        </div>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="../index.html">HOME</a></li>
+            <li><a href="../about.html">ABOUT</a></li>
+            <li><a href="../architecture.html" class="active">ARCHITECTURE</a></li>
+            <li><a href="../interior.html">INTERIOR</a></li>
+            <li><a href="../contact.html">CONTACT</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="office-section">
+
+    <a href="../professional.html" class="back-btn">← Professional</a>
+
+    <h1 class="office-title">Shri Ram Hotel</h1>
+    <p class="office-subtitle">Working Drawings · Maihar · MP</p>
+
+    <div class="mobile-note">
+
+    For the best viewing experience,
+    detailed working drawings are recommended
+    to be viewed on desktop/laptop devices
+    for high-resolution zoom and clarity.
+
+</div>
+
+    <div class="office-gallery">
+
+        <!-- PLAN -->
+        <div class="drawing-item">
+            <img src="...\assets\images\professional\working/plan.jpg"
+                 onclick="openViewer(this.src)">
+            <p>Plan</p>
+        </div>
+
+        <!-- PLUMBING -->
+        <div class="drawing-item">
+            <img src="...\assets\images\professional\working/plumbing.jpg"
+                 onclick="openViewer(this.src)">
+            <p>Plumbing</p>
+        </div>
+
+        <!-- ELECTRICAL -->
+        <div class="drawing-item">
+            <img src="...\assets\images\professional\working/electrical.jpg"
+                 onclick="openViewer(this.src)">
+            <p>Electrical</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FULLSCREEN VIEWER -->
+
+<div id="viewer">
+    <span class="close-btn" onclick="closeViewer()">✕</span>
+    <img id="viewerImg">
+</div>
+
+<script>
+
+function openViewer(src) {
+    document.getElementById("viewer").style.display = "flex";
+    document.getElementById("viewerImg").src = src;
+}
+
+function closeViewer() {
+    document.getElementById("viewer").style.display = "none";
+}
+
+</script>
+
+</body>
+</html>

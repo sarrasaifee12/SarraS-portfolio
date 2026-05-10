@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Academic Studio Works | Sarra Saifee</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FONTS -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<!-- BACKGROUND IMAGE -->
+
+<img src="assets/images/academic-bg.jpg" class="academic-bg">
+
+<!-- HEADER -->
+
+<header>
+
+    <div class="brand">
+
+        <div class="logo-circle">
+            <img src="assets/images/logo.png" alt="Logo">
+        </div>
+
+        <div class="brand-text">
+
+            <div class="brand-name">
+                SARRA SAIFEE
+            </div>
+
+            <div class="brand-subtitle">
+                5th Year Architecture Student
+            </div>
+
+        </div>
+
+    </div>
+
+    <nav>
+
+        <ul>
+
+            <li><a href="index.html">HOME</a></li>
+
+            <li><a href="about.html">ABOUT</a></li>
+
+            <li><a href="architecture.html" class="active">ARCHITECTURE</a></li>
+
+            <li><a href="interior.html">INTERIOR</a></li>
+
+            <li><a href="contact.html">CONTACT</a></li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+<!-- PAGE -->
+
+<section class="projects-section">
+
+    <div class="projects-container">
+
+        <h1>Academic Studio Works</h1>
+
+        <div class="projects-grid">
+
+            <!-- MIXED USE HOUSING -->
+
+            <a href="projects/mixed-use-housing.html" class="project-card">
+
+                <div class="project-image"
+                style="background: url('assets/images/mixed-use-housing/cover.jpg') center/cover;">
+                </div>
+
+                <div class="project-info">
+
+                    <h3>Mixed Use Housing Apartment</h3>
+
+                    <p>2025</p>
+
+                </div>
+
+            </a>
+
+            <!-- TEMPORARY ACCOMMODATIONS -->
+
+            <a href="projects/temporary-accommodations.html" class="project-card">
+
+                <div class="project-image"
+                style="background: url('assets/images/temporary-accommodations/cover.jpg') center/cover;">
+                </div>
+
+                <div class="project-info">
+
+                    <h3>Temporary Accommodations</h3>
+
+                    <p>2024</p>
+
+                </div>
+
+            </a>
+
+            <!-- MUSEUM -->
+
+            <a href="projects/museum-of-emotions.html" class="project-card">
+
+                <div class="project-image"
+                style="background: url('assets/images/museum-of-emotions/cover.jpg') center/cover;">
+                </div>
+
+                <div class="project-info">
+
+                    <h3>Museum of Emotions</h3>
+
+                    <p>2024</p>
+
+                </div>
+
+            </a>
+
+            <!-- MOTEL -->
+
+            <a href="projects/motel.html" class="project-card">
+
+                <div class="project-image"
+                style="background: url('assets/images/motel/cover.jpg') center/cover;">
+                </div>
+
+                <div class="project-info">
+
+                    <h3>Motel</h3>
+
+                    <p>2023</p>
+
+                </div>
+
+            </a>
+
+            <!-- CHAPPAN DUKAN -->
+
+            <a href="projects/chappan-dukan.html" class="project-card">
+
+                <div class="project-image"
+                style="background: url('assets/images/chappan-dukan/cover.jpg') center/cover;">
+                </div>
+
+                <div class="project-info">
+
+                    <h3>Chappan Dukan</h3>
+
+                    <p>2026</p>
+
+                </div>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- BACK BUTTON -->
+
+<button class="back-button" onclick="goBack()">
+
+    &#10094; Back
+
+</button>
+
+<!-- SCRIPT -->
+
+<script>
+
+function goBack() {
+
+    if (document.referrer !== "") {
+
+        window.history.back();
+
+    } else {
+
+        window.location.href = "architecture.html";
+    }
+}
+
+</script>
+
+</body>
+
+</html>

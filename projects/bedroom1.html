@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bedroom 1 | US Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<button class="back-button" onclick="goBack()">&#10094; Back</button>
+
+<section class="room-page">
+
+    <h1 class="fade-up">Bedroom 1</h1>
+
+    <div class="room-grid">
+
+        <div class="room-img">
+            <img src="../assets/images/interior/project1/bedroom1/img1.jpg" onclick="openViewer(this.src)">
+        </div>
+
+        <div class="room-img">
+            <img src="../assets/images/interior/project1/bedroom1/img2.jpg" onclick="openViewer(this.src)">
+        </div>
+
+        <div class="room-img">
+            <img src="../assets/images/interior/project1/bedroom1/img3.jpg" onclick="openViewer(this.src)">
+        </div>
+
+        <div class="room-img">
+            <img src="../assets/images/interior/project1/bedroom1/img4.jpg" onclick="openViewer(this.src)">
+        </div>
+
+        <div class="room-img">
+            <img src="../assets/images/interior/project1/bedroom1/img5.jpg" onclick="openViewer(this.src)">
+        </div>
+
+        <div class="room-img">
+            <img src="../assets/images/interior/project1/bedroom1/img6.jpg" onclick="openViewer(this.src)">
+        </div>
+
+        <div class="room-img">
+            <img src="../assets/images/interior/project1/bedroom1/img7.jpg" onclick="openViewer(this.src)">
+        </div>
+
+        <div class="room-img">
+            <img src="../assets/images/interior/project1/bedroom1/img8.jpg" onclick="openViewer(this.src)">
+        </div>
+
+    </div>
+
+</section>
+
+
+<div class="room-navigation">
+    <span></span>
+    <a href="bedroom2.html" class="nav-btn next">Bedroom 2 →</a>
+</div>
+
+
+<!-- FULLSCREEN VIEW -->
+<div id="viewer">
+    <span class="close-btn" onclick="closeViewer()">✕</span>
+    <img id="viewerImg">
+</div>
+
+<script>
+function goBack() {
+    window.history.back();
+}
+
+function openViewer(src) {
+    document.getElementById("viewer").style.display = "flex";
+    document.getElementById("viewerImg").src = src;
+}
+
+function closeViewer() {
+    document.getElementById("viewer").style.display = "none";
+}
+
+/* ANIMATION */
+window.addEventListener("load", () => {
+    document.querySelector(".fade-up").classList.add("show");
+});
+</script>
+
+</body>
+</html>

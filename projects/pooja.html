@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pooja Room | US Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<button class="back-button" onclick="goBack()">&#10094; Back</button>
+
+<section class="room-page">
+
+    <h1 class="fade-up">Pooja Room</h1>
+
+    <div class="pooja-grid">
+
+    <!-- HERO -->
+    <div class="pooja-main">
+        <img src="../assets/images/interior/project1/pooja/img1.jpg" onclick="openViewer(this.src)">
+    </div>
+
+    <!-- REST -->
+    <div class="pooja-img"><img src="../assets/images/interior/project1/pooja/img2.jpg" onclick="openViewer(this.src)"></div>
+    <div class="pooja-img"><img src="../assets/images/interior/project1/pooja/img3.jpg" onclick="openViewer(this.src)"></div>
+    <div class="pooja-img"><img src="../assets/images/interior/project1/pooja/img4.jpg" onclick="openViewer(this.src)"></div>
+    <div class="pooja-img"><img src="../assets/images/interior/project1/pooja/img5.jpg" onclick="openViewer(this.src)"></div>
+    <div class="pooja-img"><img src="../assets/images/interior/project1/pooja/img6.jpg" onclick="openViewer(this.src)"></div>
+    <div class="pooja-img"><img src="../assets/images/interior/project1/pooja/img7.jpg" onclick="openViewer(this.src)"></div>
+    <div class="pooja-img"><img src="../assets/images/interior/project1/pooja/img8.jpg" onclick="openViewer(this.src)"></div>
+
+</div>
+
+    <!-- NAVIGATION -->
+    <div class="room-navigation">
+        <a href="living.html" class="nav-btn prev">← Living Area</a>
+        <a href="office.html" class="nav-btn next">Library / Office →</a>
+    </div>
+
+</section>
+
+<!-- VIEWER -->
+<div id="viewer">
+    <span class="close-btn" onclick="closeViewer()">✕</span>
+    <img id="viewerImg">
+</div>
+
+<script>
+function goBack() {
+    window.history.back();
+}
+
+function openViewer(src) {
+    document.getElementById("viewer").style.display = "flex";
+    document.getElementById("viewerImg").src = src;
+}
+
+function closeViewer() {
+    document.getElementById("viewer").style.display = "none";
+}
+
+window.addEventListener("load", () => {
+    document.querySelector(".fade-up").classList.add("show");
+});
+</script>
+
+</body>
+</html>
