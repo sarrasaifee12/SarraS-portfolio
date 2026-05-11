@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>US Project | Sarra Saifee</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<button class="back-button" onclick="goBack()">&#10094; Back</button>
+
+<section class="project-page">
+
+    <h1 class="fade-up">Project S</h1>
+
+    <!-- VIDEO -->
+
+    <video autoplay muted loop playsinline class="spo-video">
+
+        <source src="../assets/videos/interior-bg.mp4" type="video/mp4">
+
+    </video>
+
+    <!-- CATEGORY TABS -->
+    <div class="tabs fade-up">
+        <button class="tab active" onclick="filterCategory('all', event)">All</button>
+        <button class="tab" onclick="filterCategory('bedroom', event)">Bedroom</button>
+        <button class="tab" onclick="filterCategory('kitchen', event)">Kitchen</button>
+        <button class="tab" onclick="filterCategory('living', event)">Living</button>
+    </div>
+
+    <!-- CATEGORY GRID -->
+
+    <div class="category-grid">
+
+        <!-- BEDROOMS -->
+        <div class="category-box bedroom">
+            <a href="bedroom1S.html">
+                <div class="category-img" style="background-image:url('../assets/images/interior/urban-nest/bedroom1.jpg')"></div>
+                <p>Bedroom 1</p>
+            </a>
+        </div>
+
+        <div class="category-box bedroom">
+            <a href="bedroom2S.html">
+                <div class="category-img" style="background-image:url('../assets/images/interior/urban-nest/bedroom2.jpg')"></div>
+                <p>Bedroom 2</p>
+            </a>
+        </div>
+
+        <div class="category-box bedroom">
+            <a href="bedroom3S.html">
+                <div class="category-img" style="background-image:url('../assets/images/interior/urban-nest/bedroom3.jpg')"></div>
+                <p>Master Bedroom</p>
+            </a>
+        </div>
+
+        <!-- KITCHEN -->
+        <div class="category-box kitchen">
+            <a href="kitchenS.html">
+                <div class="category-img" style="background-image:url('../assets/images/interior/urban-nest/kitchen.jpg')"></div>
+                <p>Kitchen</p>
+            </a>
+        </div>
+
+        <!-- LIVING -->
+        <div class="category-box living">
+            <a href="livingS.html">
+                <div class="category-img" style="background-image:url('../assets/images/interior/urban-nest/living-room.jpg')"></div>
+                <p>Living Area</p>
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
+<script>
+function goBack() {
+    window.history.back();
+}
+
+function filterCategory(category, event) {
+
+    const boxes = document.querySelectorAll(".category-box");
+    const tabs = document.querySelectorAll(".tab");
+
+    tabs.forEach(tab => tab.classList.remove("active"));
+    event.target.classList.add("active");
+
+    boxes.forEach(box => {
+        if (category === "all" || box.classList.contains(category)) {
+            box.style.display = "block";
+        } else {
+            box.style.display = "none";
+        }
+    });
+}
+
+/* ENTRY ANIMATION */
+window.addEventListener("load", () => {
+    document.querySelectorAll(".fade-up").forEach((el, i) => {
+        setTimeout(() => el.classList.add("show"), i * 150);
+    });
+});
+</script>
+
+</body>
+</html>

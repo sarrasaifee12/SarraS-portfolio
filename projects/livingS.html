@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Living Area | Project S</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<button class="back-button" onclick="goBack()">&#10094; Back</button>
+
+<section class="room-page">
+
+    <h1 class="fade-up">Living Area</h1>
+
+    <div class="living-grid">
+
+    <!-- HERO -->
+    <div class="living-img large">
+        <img src="../assets/images/interior/urban-nest/living-room/img1.jpg" onclick="openViewer(this.src)">
+    </div>
+
+    <!-- REST GRID -->
+    <div class="living-img"><img src="../assets/images/interior/urban-nest/living-room/img2.jpg" onclick="openViewer(this.src)"></div>
+    <div class="living-img"><img src="../assets/images/interior/urban-nest/living-room/img3.jpg" onclick="openViewer(this.src)"></div>
+    <div class="living-img"><img src="../assets/images/interior/urban-nest/living-room/img4.jpg" onclick="openViewer(this.src)"></div>
+    <div class="living-img"><img src="../assets/images/interior/urban-nest/living-room/img5.jpg" onclick="openViewer(this.src)"></div>
+    <div class="living-img"><img src="../assets/images/interior/urban-nest/living-room/img6.jpg" onclick="openViewer(this.src)"></div>
+    <div class="living-img"><img src="../assets/images/interior/urban-nest/living-room/img7.jpg" onclick="openViewer(this.src)"></div>
+    <div class="living-img"><img src="../assets/images/interior/urban-nest/living-room/img8.jpg" onclick="openViewer(this.src)"></div>
+    <div class="living-img"><img src="../assets/images/interior/urban-nest/living-room/img9.jpg" onclick="openViewer(this.src)"></div>
+    <div class="living-img"><img src="../assets/images/interior/urban-nest/living-room/img10.jpg" onclick="openViewer(this.src)"></div>
+    <div class="living-img"><img src="../assets/images/interior/urban-nest/living-room/img11.jpg" onclick="openViewer(this.src)"></div>
+    <div class="living-img"><img src="../assets/images/interior/urban-nest/living-room/img12.jpg" onclick="openViewer(this.src)"></div>
+    <div class="living-img"><img src="../assets/images/interior/urban-nest/living-room/img13.jpg" onclick="openViewer(this.src)"></div>
+    <div class="living-img"><img src="../assets/images/interior/urban-nest/living-room/img14.jpg" onclick="openViewer(this.src)"></div>
+    <div class="living-img"><img src="../assets/images/interior/urban-nest/living-room/img15.jpg" onclick="openViewer(this.src)"></div>
+    <div class="living-img"><img src="../assets/images/interior/urban-nest/living-room/img16.jpg" onclick="openViewer(this.src)"></div>
+    <div class="living-img"><img src="../assets/images/interior/urban-nest/living-room/img17.jpg" onclick="openViewer(this.src)"></div>
+
+</div>
+
+
+    <!-- NAVIGATION -->
+    <div class="room-navigation">
+    <a href="kitchenS.html" class="nav-btn prev">← Kitchen</a>
+    <span></span>
+</div>
+
+</section>
+
+<!-- FULLSCREEN VIEW -->
+<div id="viewer">
+    <span class="close-btn" onclick="closeViewer()">✕</span>
+    <img id="viewerImg">
+</div>
+
+<script>
+function goBack() {
+    window.history.back();
+}
+
+function openViewer(src) {
+    document.getElementById("viewer").style.display = "flex";
+    document.getElementById("viewerImg").src = src;
+}
+
+function closeViewer() {
+    document.getElementById("viewer").style.display = "none";
+}
+
+/* ANIMATION */
+window.addEventListener("load", () => {
+    document.querySelector(".fade-up").classList.add("show");
+});
+</script>
+
+</body>
+</html>

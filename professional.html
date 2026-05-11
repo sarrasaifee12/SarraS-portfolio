@@ -151,6 +151,23 @@
 
         </a>
 
+        <!-- PROJECT 4 -->
+         
+        <div class="pro-row">
+            <div class="pro-img">
+                <img src="assets/images/professional/Ujjain/cover.jpg" alt="Ujjain Site" class="fullscreen-trigger">
+            </div>
+            
+            <div class="pro-text">
+
+                <h3>Ujjain Site Planning</h3>
+                
+                <p>Site Development Proposal · Ujjain, MP</p>
+            
+            </div>
+        
+        </div>
+
     </section>
 
     <!-- BACK BUTTON -->
@@ -160,6 +177,16 @@
         <span>←</span> BACK
 
     </a>
+
+    <!-- FULLSCREEN IMAGE VIEWER -->
+     
+    <div class="fullscreen-viewer" id="fullscreenViewer">
+        
+        <span class="close-viewer" id="closeViewer">✕</span>
+        
+        <img id="fullscreenImg" src="" alt="">
+    
+    </div>
 
     <!-- SCRIPT -->
 
@@ -195,6 +222,32 @@
             img.style.backgroundPosition = "center";
         });
 
+    });
+
+    const fullscreenViewer =
+    document.getElementById("fullscreenViewer");
+    
+    const fullscreenImg =
+    document.getElementById("fullscreenImg");
+    
+    const closeViewer =
+    document.getElementById("closeViewer");
+    
+    document
+    .querySelectorAll(".fullscreen-trigger")
+    .forEach(img => {
+        
+        img.addEventListener("click", () => {
+            fullscreenViewer.style.display = "flex";
+            fullscreenImg.src = img.src;
+        });
+    
+    });
+    
+    closeViewer.addEventListener("click", () => {
+        
+        fullscreenViewer.style.display = "none";
+    
     });
 
     </script>

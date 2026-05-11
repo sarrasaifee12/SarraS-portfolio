@@ -4467,7 +4467,7 @@ body::before {
 
     .brand-name {
 
-        font-size: 18px;
+        font-size: 15px;
 
         letter-spacing: 2px;
     }
@@ -4632,7 +4632,7 @@ body::before {
         min-height: 100vh;
 
         padding:
-        120px 22px 60px 22px !important;
+        100px 22px 60px 22px !important;
 
         display: flex;
 
@@ -6418,4 +6418,53 @@ video {
 
         font-size: 15px !important;
     }
+}
+
+/* FULLSCREEN IMAGE VIEWER */
+
+.fullscreen-viewer {
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0,0,0,0.94);
+
+    display: none;
+
+    justify-content: center;
+
+    align-items: center;
+
+    z-index: 9999;
+
+    padding: 40px;
+}
+
+.fullscreen-viewer img {
+
+    max-width: 95%;
+
+    max-height: 95%;
+
+    object-fit: contain;
+
+    border-radius: 12px;
+}
+
+.close-viewer {
+
+    position: absolute;
+
+    top: 30px;
+
+    right: 40px;
+
+    font-size: 34px;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-family: sans-serif;
 }
