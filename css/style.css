@@ -2993,6 +2993,8 @@ body {
 
     font-size: 17px;
 
+    text-align: justify;
+
     line-height: 1.9;
 
     color: rgba(255,255,255,0.78);
@@ -3157,7 +3159,7 @@ body {
 .annotation-4 {
 
     top: 220px;
-    right: 170px;
+    right: 190px;
 }
 
 .annotation-2 {
@@ -3181,7 +3183,7 @@ body {
 .annotation-5 {
 
     top: 320px;
-    right: 80px;
+    right: 138px;
 }
 
 /* ========================================= */
